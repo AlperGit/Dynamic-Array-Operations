@@ -16,4 +16,5 @@ Requirements:
 
 Building:
 run the following command in any terminal with gcc:
-gcc Source.c -o Source.cmd
+
+    gcc Source.c -o Source.cmd

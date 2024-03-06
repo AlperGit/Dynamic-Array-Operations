@@ -80,11 +80,13 @@ Write a function to display the elements of the dynamic array.
 */
 void display()
 {
-    for (int i = 0; i < dyn_size; i++)
+    //Loop through all elements - 1 and print them  
+    for (int i = 0; i < dyn_size-1; i++)
     {
         printf("%d,", dyn_array[i]);
     }
-    printf("\n");
+    //print last element without seperator and line break
+    printf("%d\n",dyn_array[dyn_size-1]);
 }
 
 int main()
@@ -96,6 +98,8 @@ int main()
     */
     int menu = 0;
     int exit = 9;
+    //The menu displays your options and reads input 
+    //from user then reacts on input based from user.
     while(menu != exit)
     {
         printf("Press 1 to create an array with specific size\n");

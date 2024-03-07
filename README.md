@@ -13,3 +13,8 @@ Requirements:
     Write a function to delete an element from a specified position in the array. Ensure that the array size is adjusted accordingly.
     Write a function to display the elements of the dynamic array.
     Create a menu-driven program that allows the user to perform these operations interactively until they choose to exit.
+
+Building:
+run the following command in any terminal with gcc:
+
+    gcc Source.c -o Source.cmd

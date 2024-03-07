@@ -137,6 +137,7 @@ int main()
         case 9:
             return 0;
         default:
+            printf("The input is not asociatable. Please retry.\n");
             break;
         }
     }

@@ -88,6 +88,18 @@ void display()
     //print last element without seperator and line break
     printf("%d\n",dyn_array[dyn_size-1]);
 }
+/*Check if position is in size of array*/
+int checkPosition(int position)
+{
+    if (position >= 0 || position < dyn_size )
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
 
 int main()
 {
@@ -123,18 +135,33 @@ int main()
             scanf("%d", &element);
             printf("Give the position to be inserted\n");
             scanf("%d", &position);
-            insert(element, position);
+            if(checkPosition(position) == 0)
+            {
+                insert(element, position);
+            }
+            else
+            {
+                printf("Position is out of bounds please retry");
+            }
             break;
         case 3:
             int deletePos = 0;
             printf("Give the position of the element to delete:\n");
             scanf("%d", &deletePos);
-            delete(deletePos);
+            if(checkPosition(deletePos) == 0)
+            {
+                delete(deletePos);
+            }
+            else
+            {
+                printf("Position is out of bounds please retry");
+            }
             break;
         case 4:
             display();
             break;
         case 9:
+            free(dyn_array);
             return 0;
         default:
             printf("The input is not asociatable. Please retry.\n");
